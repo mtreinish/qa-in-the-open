@@ -1,0 +1,218 @@
+\documentclass[aspectratio=169,11pt,hyperref={colorlinks=true}]{beamer}
+\usetheme{boxes}
+\setbeamertemplate{navigation symbols}{}
+\definecolor{openstack}{RGB}{149,0,4}
+\setbeamercolor{titlelike}{fg=openstack}
+\setbeamercolor{structure}{fg=openstack}
+\hypersetup{colorlinks,urlcolor=openstack}
+\setbeamertemplate{footline}[frame number]
+% Inserting graphics
+\usepackage{graphicx}
+% Side-by-side figures, etc
+\usepackage{subfigure}
+% Code snippits
+\usepackage{listings}
+% Color stuff
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{tikz}
+\newcommand\RBox[1]{%
+  \tikz\node[draw,rounded corners,align=center,] {#1};%
+}
+\usepackage{hyperref}
+%\usecolortheme{buzz}
+%\usecolortheme{wolverine}
+%\usetheme{Boadilla}
+\usepackage[T1]{fontenc}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{openstack},  % comment style
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stringstyle=\color{openstack},   % string literal style
+}
+
+\setbeamerfont{caption}{series=\normalfont,size=\fontsize{6}{8}}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\floatsep}{0pt}
+
+\author[Matthew Treinish]{%
+    \texorpdfstring{
+        \centering
+        Matthew Treinish\\
+        \href{mailto:mtreinish@kortar.org}{mtreinish@kortar.org}\\
+        \texttt{mtreinish on Freenode}
+   }
+   {Matthew Treinish}
+}
+\date{March 19, 2015}
+
+\title[QA in the Open
+\hspace{2em}\insertframenumber/\inserttotalframenumber]{QA in the Open}
+
+\begin{document}
+
+{
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{background_title.png}}
+\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    \setbeamercolor{titlelike}{fg=white}
+    \setbeamercolor{structure}{fg=white}
+    \setbeamercolor{normal text}{fg=white}
+    \hypersetup{colorlinks,urlcolor=white}
+    \setbeamercolor{author}{fg=white}
+    \setbeamercolor{date}{fg=white}
+    \setbeamercolor{background}{bg=openstack}
+    \titlepage{}
+    \centering
+    \href{https://github.com/mtreinish/qa-in-the-open}{https://github.com/mtreinish/qa-in-the-open}
+\end{frame}
+}
+
+\section{Open Source QA}
+\begin{frame}
+    \frametitle{Open Source QA}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{My Experiences with Comericial Software QA}
+
+\end{frame}
+
+\section{What is OpenStack?}
+\begin{frame}
+    \frametitle{What is OpenStack}
+
+\end{frame}
+
+\section{What is OpenStack QA?}
+\begin{frame}
+    \frametitle{What is OpenStack QA?}
+    \begin{itemize}
+     \item Official Mission Statement:\\
+         \textit{Develop, maintain, and initiate tools and plans to ensure
+the upstream stability and quality of OpenStack, and its release readiness at
+any point during the release cycle.}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Current QA Projects}
+    \begin{itemize}
+    \item{bashate}
+    \item{devstack}
+    \item{devstack-plugin-cookiecutter}
+    \item{devstack-vagrant}
+    \item{grenade}
+    \item{tempest}
+    \item{tempest-lib}
+    \item{tempest-plugin-cookiecutter}
+    \item{stackviz}
+    \item{hacking}
+    \item{eslint-config-openstack}
+    \item{os-testr}
+    \item{openstack-health dashboard}
+    \end{itemize}
+\end{frame}
+
+\section{History of OpenStack QA}
+
+\begin{frame}
+    \frametitle{OpenStack Project Growth}
+    \begin{center}
+        \includegraphics[width=\textwidth]{OpenStack_Components.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tempest Tests per Project}
+    \begin{center}
+        \includegraphics[width=.8\textwidth]{tests_per_proj.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Big Tent\ldots}
+    \begin{center}
+        \includegraphics[width=.9\textwidth]{Burning_Tent.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{QA in the Big Tent}
+    \begin{itemize}
+        \item QA projects now directly support base
+        \item Provide stable plugin interfaces to expand functionality
+        \item Better fits with the growth in projects
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Current Projects QA directly supports in-tree}
+    \begin{itemize}
+        \item Keystone
+        \item Nova
+        \item Glance
+        \item Cinder
+        \item Neutron
+        \item Swift
+    \end{itemize}
+\end{frame}
+
+\section{Conclusions}
+
+\begin{frame}
+    \frametitle{Advantages}
+    \begin{itemize}
+        \item Public audit of testing
+        \item User confidence
+        \item 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Problems}
+ a   \begin{itemize}
+        \item Lack of Corporate Contribution 
+        \item 
+        \item
+    \end{itemize}
+\end{frame}
+
+\section{More Information}
+\begin{frame}
+\frametitle{Where to get more information}
+    \begin{itemize}
+        \item openstack-dev ML: \href{mailto:openstack-dev@lists.openstack.org}{openstack-dev@lists.openstack.org}
+        \item \#openstack-qa on Freenode
+    \end{itemize}
+\end{frame}
+
+\section{Questions}
+\begin{frame}
+\frametitle{Questions?}
+\end{frame}
+
+%\section{Extra Info}
+a\end{document}
