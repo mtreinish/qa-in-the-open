@@ -92,19 +92,16 @@
     \frametitle{What do I mean by Open Source QA}
     \begin{itemize}
         \item Doing Software QA in an Open Source manner
+        \item Includes running tests and hosting results in the public
         \item 
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{My Personal Experiences with Comericial Software QA}
-
-\end{frame}
-
-\section{What is OpenStack?}
-\begin{frame}
-    \frametitle{What is OpenStack}
-
+    \frametitle{My Personal Experiences with Enterprise QA}
+    \begin{center}
+        \includegraphics[width=.5\textwidth]{facepalm.jpg}
+    \end{center}
 \end{frame}
 
 \section{What is OpenStack QA?}
@@ -143,6 +140,17 @@ any point during the release cycle.}
 
 \begin{frame}
     \frametitle{In The Beginning}
+    \begin{itemize}
+    \item Projects had unit tests
+    \item Some projects had functional tests
+    \item Testing was central to OpenStack culture
+    \item No dedicated effort on QA
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tempest and becoming a defined group}
+
 \end{frame}
 
 \begin{frame}
@@ -175,25 +183,22 @@ any point during the release cycle.}
     \end{itemize}
 \end{frame}
 
+\section{Conclusions}
+
 \begin{frame}
-    \frametitle{Current Projects QA directly supports in-tree}
+    \frametitle{Lessons from OpenStack QA}
     \begin{itemize}
-        \item Keystone
-        \item Nova
-        \item Glance
-        \item Cinder
-        \item Neutron
-        \item Swift
+        \item Monolithic and Separate doesn't scale
+        \item 
+        \item 
     \end{itemize}
 \end{frame}
-
-\section{Conclusions}
 
 \begin{frame}
     \frametitle{Advantages}
     \begin{itemize}
         \item Public audit of testing
-        \item User confidence
+        \item User confidence in project
         \item Reusable components
     \end{itemize}
 \end{frame}
@@ -202,7 +207,7 @@ any point during the release cycle.}
     \frametitle{Problems}
     \begin{itemize}
         \item Lack of Corporate Contribution 
-        \item Limited Free Resources
+        \item Limited Free Resources for running tests
         \item Sometimes difficult to get community buy in
     \end{itemize}
 \end{frame}
