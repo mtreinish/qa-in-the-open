@@ -63,7 +63,7 @@
    }
    {Matthew Treinish}
 }
-\date{March 19, 2015}
+\date{March 20, 2015}
 
 \title[QA in the Open
 \hspace{2em}\insertframenumber/\inserttotalframenumber]{QA in the Open}
@@ -93,14 +93,14 @@
     \begin{itemize}
         \item Doing Software QA in an Open Source manner
         \item Includes running tests and hosting results in the public
-        \item 
+        \item Basically treat a project's QA like any other Open Source project
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{My Personal Experiences with Enterprise QA}
     \begin{center}
-        \includegraphics[width=.5\textwidth]{facepalm.jpg}
+        \includegraphics[width=.75\textwidth]{facepalm.jpg}
     \end{center}
 \end{frame}
 
@@ -150,7 +150,11 @@ any point during the release cycle.}
 
 \begin{frame}
     \frametitle{Tempest and becoming a defined group}
-
+    \begin{itemize}
+    \item Tempest as separate integrated test suite to run against a deployed cloud
+    \item 2 years later a separate project was created in governance around QA
+    \item Slowly consolidated several existing and new projects
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -189,7 +193,7 @@ any point during the release cycle.}
     \frametitle{Lessons from OpenStack QA}
     \begin{itemize}
         \item Monolithic and Separate doesn't scale
-        \item 
+        \item Keeping Things Separate increases friction
         \item 
     \end{itemize}
 \end{frame}
@@ -197,14 +201,15 @@ any point during the release cycle.}
 \begin{frame}
     \frametitle{Advantages}
     \begin{itemize}
-        \item Public audit of testing
+        \item Enables external audit of testing
         \item User confidence in project
+        \item Enables indpendently repeatable testing
         \item Reusable components
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Problems}
+    \frametitle{Potential Issues}
     \begin{itemize}
         \item Lack of Corporate Contribution 
         \item Limited Free Resources for running tests
