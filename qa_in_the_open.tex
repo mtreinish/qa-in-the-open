@@ -117,23 +117,30 @@ any point during the release cycle.}
 
 \begin{frame}
     \frametitle{Current QA Projects}
-    \begin{itemize}
-    \item{bashate}
-    \item{devstack}
-    \item{devstack-plugin-cookiecutter}
-    \item{devstack-plugin-ceph}
-    \item{devstack-vagrant}
-    \item{grenade}
-    \item{tempest}
-    \item{tempest-lib}
-    \item{tempest-plugin-cookiecutter}
-    \item{stackviz}
-    \item{hacking}
-    \item{eslint-config-openstack}
-    \item{os-testr}
-    \item{os-performance-tools}
-    \item{openstack-health dashboard}
-    \end{itemize}
+    \begin{columns}
+        \column{.45\linewidth}
+            \begin{itemize}
+                \item{devstack}
+                \item{devstack-plugin-cookiecutter}
+                \item{devstack-plugin-ceph}
+                \item{devstack-vagrant}
+                \item{grenade}
+                \item{tempest}
+                \item{tempest-lib}
+                \item{tempest-plugin-cookiecutter}
+            \end{itemize}
+        \column{.45\linewidth}
+            \begin{itemize}
+                \item{bashate}
+                \item{stackviz}
+                \item{hacking}
+                \item{eslint-config-openstack}
+                \item{os-testr}
+                \item{os-performance-tools}
+                \item{openstack-health dashboard}
+                \item{karma-subunit-reporter}
+            \end{itemize}
+    \end{columns}
 \end{frame}
 
 \section{History of OpenStack QA}
@@ -149,11 +156,18 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tempest and becoming a defined group}
+    \frametitle{Then there was tempest}
     \begin{itemize}
-    \item Tempest as separate integrated test suite to run against a deployed cloud
-    \item 2 years later a separate project was created in governance around QA
-    \item Slowly consolidated several existing and new projects
+        \item Tempest is an integration
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{QA Becoming a Defined Group}
+    \begin{itemize}
+        \item Tempest as separate integrated test suite to run against a deployed cloud
+        \item 2 years later a separate project was created in governance around QA
+        \item Slowly consolidated several existing and new projects
     \end{itemize}
 \end{frame}
 
@@ -179,12 +193,24 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
+    \frametitle{The Big Tent}
+    \begin{itemize}
+        \item 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
     \frametitle{QA in the Big Tent}
     \begin{itemize}
-        \item QA projects now directly support base
-        \item Provide stable plugin interfaces to expand functionality
+        \item QA projects will still provide direct support for base IaaS projects
+        \item Provide stable plugin interfaces to expand functionality for other projects
         \item Better fits with the growth in projects
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Introducing Plugin Interfaces}
+    
 \end{frame}
 
 \section{Conclusions}
