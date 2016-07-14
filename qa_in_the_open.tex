@@ -100,7 +100,7 @@
 \begin{frame}
     \frametitle{My Personal Experiences with Enterprise QA}
     \begin{center}
-        \includegraphics[width=.75\textwidth]{facepalm.jpg}
+        \includegraphics[width=.85\textwidth]{facepalm.jpg}
     \end{center}
 \end{frame}
 
@@ -151,12 +151,12 @@ any point during the release cycle.}
     \item Projects had unit tests
     \item Some projects had functional tests
     \item Testing was central to OpenStack culture
-    \item No dedicated effort on QA
+    \item But, no dedicated effort on QA or testing
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Then there was tempest}
+    \frametitle{Then there was Tempest}
     \begin{itemize}
         \item Tempest is an integration suite that runs against a running
             OpenStack cloud via the REST APIs
@@ -174,32 +174,37 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Early Problems}
+    \frametitle{Early Approach to QA}
     \begin{itemize}
-        \item Only support for testing \textbf{Integrated} and \textbf{Incubated} projects
-        \item A more traditional top down approach
-        \item Small team size made scaling with OpenStack difficult
+        \item Only support for testing \textbf{Integrated} and
+              \textbf{Incubated} projects
+        \item Closer to a more traditional top down approach
+        \item Testing was mostly unit tests and tempest tests
+        \item All integrated and incubated projects had to co-gate against
+              each other in 1 large integrated gate queue
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{OpenStack Project Growth}
     \begin{center}
-        \includegraphics[width=\textwidth]{OpenStack_Components.png}
+        \includegraphics[width=1.1\textwidth]{OpenStack_Components.png}
     \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{QA Growing Pains}
+    \begin{itemize}
+        \item QA Projects have a small core review team
+        \item Limited expertise on newer projects
+        \item Project teams weren't motivated to contribute
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Tempest Tests per Project}
     \begin{center}
-        \includegraphics[width=.8\textwidth]{tests_per_proj.png}
-    \end{center}
-\end{frame}
-
-\begin{frame}
-    \frametitle{The Big Tent\ldots}
-    \begin{center}
-        \includegraphics[width=.9\textwidth]{Burning_Tent.jpg}
+        \includegraphics[width=.95\textwidth]{tests_per_proj.png}
     \end{center}
 \end{frame}
 
@@ -207,10 +212,18 @@ any point during the release cycle.}
     \frametitle{The Big Tent}
     \begin{itemize}
         \item OpenStack's most recent governance change
-        \item
-        \item Integrated and incubated projects no longer a term
-        \item 
+        \item Went from having a strict 2 stage approval process and a small
+            set of OpenStack projects to a more inclusive approach
+        \item Integrated and incubated projects no longer a thing
+        \item Designed to switch from choosing winners to building an ecosystem
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Big Tent\ldots}
+    \begin{center}
+        \includegraphics[width=.9\textwidth]{Burning_Tent.jpg}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -223,7 +236,13 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Introducing Plugin Interfaces}    
+    \frametitle{Introducing Plugin Interfaces}
+    \begin{itemize}
+        \item Add stable interfaces to expand QA project functionality
+        \item Enable any project to self service their own QA
+        \item Concentrate on making things in QA projects externally reusable
+        \item Started with Devstack, now Tempest and Grenade too
+    \end{itemize}
 \end{frame}
 
 \section{Conclusions}
