@@ -23,11 +23,11 @@ ax.xaxis_date()
 ax.xaxis.set_major_formatter(xfmt)
 
 plt.plot(tempest_df.index, tempest_df['number'], label='Tempest',
-         linewidth=3.0)
+         linewidth=6.0)
 plt.plot(devstack_df.index, devstack_df['number'], label='Devstack',
-         linewidth=3.0)
+         linewidth=6.0)
 plt.plot(grenade_df.index, grenade_df['number'], label='Grenade',
-        linewidth=3.0)
+        linewidth=6.0)
 
 plt.legend()
 plt.savefig('plugins.png', dpi=900)
