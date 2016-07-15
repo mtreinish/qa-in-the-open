@@ -153,7 +153,7 @@ plt.figure()
 df = pandas.read_csv('i_hate_pandas.csv')
 
 plt.ylabel('# of tests')
-ax = parallel_coordinates(df, 'name')
+ax = parallel_coordinates(df, 'name', linewidth=5.0)
 ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.05),
            ncol=3, fancybox=True, shadow=True)
 plt.savefig('tests_per_proj.png', dpi=900)
