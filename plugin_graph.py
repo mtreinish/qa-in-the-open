@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.dates as dates
 import matplotlib.pyplot as plt
 
-tempest_df = pd.read_csv('graphs/tempest_plugins.dat', sep =' ')
+tempest_df = pd.read_csv('graphs/tempest_plugins.dat', sep=' ')
 tempest_df = tempest_df.set_index('time')
 devstack_df = pd.read_csv('graphs/devstack_plugins.dat', sep=' ')
 devstack_df = devstack_df.set_index('time')

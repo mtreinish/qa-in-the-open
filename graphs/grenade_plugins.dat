@@ -7,3 +7,6 @@ time number name
 2016-04-22 6 manila
 2016-05-06 7 neutron-vpnaas
 2016-07-01 8 ironic-inspector
+2016-07-11 9 networking-ovn
+2016-07-14 10 designate
+2016-11-03 11 networking-odl
